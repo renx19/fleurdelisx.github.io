@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleur De Lis</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li id="search-btn">
+                    <!-- Search Form -->
+                    <form id="searchForm" action="search_results.html" method="GET">
+                        <input type="text" name="search" placeholder="Search...">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                      </form>
+    
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contanct.html">Contact</a></li>
+                <li id="bag"><a class="active" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <a href="#" id="close"> <i class="fas fa-window-close"> </i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    
+
+    <section id="page-header" class="about-header cart-page">
+        <!-- Home Page SHIRO/HERO   -->
+        <h2> "Add to Cart"</h2>
+        <h1> Fleur De Lis Apparel</h1>
+        <p> Shop More, See Our 50% Off </p>   
+    </section>
+    
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                    <td>Remove</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Existing items in the cart -->
+                <tr>
+                    <td><img src="images/products/1.jpg" alt=""></td>
+                    <td>Zara Squareneck Lettuce Buttondown</td>
+                    <td>₱200</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>₱200</td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+    
+                <tr>
+                    <td><img src="images/products/5.jpg" alt=""></td>
+                    <td>Shein Cardigan</td>
+                    <td>₱200</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>₱200</td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+    
+                <tr>
+                    <td><img src="images/products/8.jpg" alt=""></td>
+                    <td>Shein One shoulder top</td>
+                    <td>₱200</td>
+                    <td><input type="number" value="1" min="1"></td>
+                    <td>₱200</td>
+                    <td><i class="fas fa-trash-alt"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+ 
+
+ 
+    <!-- Coupon and Checkout Sections -->
+    <section id="coupon-checkout-container" class="section-p1">
+        <div id="coupon">
+            <h2>Apply Coupon</h2>
+            <input type="text" id="coupon-code" placeholder="Enter Coupon-Code">
+            <button onclick="applyCoupon()">Apply </button>
+            <p id="coupon-result"></p>
+        </div>
+    
+        <div id="checkout-box">
+            <h2>Checkout</h2>
+            <table>
+                <tr>
+                    <td>Total Quantity:</td>
+                    <td id="total-quantity">3</td>
+                </tr>
+                <tr>
+                    <td>Total Price:</td>
+                    <td id="total-price">₱600</td>
+                </tr>
+                <tr>
+                    <td>Payment Method:</td>
+                    <td id="payment-select">
+                        <!-- Select Type of Payment -->
+                      
+                        <select id="payment-type">
+                            <option value="credit-card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank-transfer">Bank Transfer</option>
+                            <!-- Add other payment options as needed -->
+                        </select>
+                        <button onclick="checkout()">Checkout</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+    
+    <section id="fleurdelis-updates" class="section-p2 section-m1">
+        <div class="updates">
+             <h4>Sign Up For More Updates </h4>
+             <p> Get Email updates about our latest merchandise and <span>Special offers</span></p>
+        </div>
+        <div class="form"> 
+        <input type="text" placeholder="Your Email Address">
+        <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo3.png" alt="">
+             <h4>Contanct</h4>
+             <p><strong>Address:</strong> 4511 San Lorenzo Tabaco City, Albay</p>
+             <p><strong>Phone:</strong> +639157544711 </p>
+           
+             <div class="follow">
+                 <h4>Follow Us On</h4>
+                  <div class="icon">
+                      <i class="fab fa-facebook fa-lg"></i>
+                      <i class="fab fa-instagram fa-lg"></i>
+                      <i class="fab fa-twitter fa-lg"></i>
+                      <i class="fab fa-tiktok fa-lg"></i>
+                      <i class="fab fa-youtube fa-lg"></i>
+                   </div>
+             </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions </a>
+            <a href="#">Conatact Us</a>
+        </div>   
+
+        <div class="col">
+             <h4>My Account</h4>
+             <a href="#">Sign In</a>
+             <a href="#">View Cart </a>
+             <a href="#">My Wishlist</a>
+             <a href="#">Track My Order </a>
+             <a href="#">Help</a>
+        </div>
+        <div class="col install">
+              <h4>Install App</h4>
+              <p>From App Store or Google Play</p>
+              <div class="row">
+                <img src="images/app2.png" alt="">
+                <img src="images/play2.png" alt="">
+              </div>
+              <p>Secured Payment Gateways</p>
+              <img src="images/pay.png" alt="">
+              </div>
+    
+
+    </div>
+    </footer>
+
+    
+    
+    
+
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
