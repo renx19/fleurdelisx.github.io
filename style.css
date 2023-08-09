@@ -48,6 +48,23 @@ p {
     margin: 40px 0;
 }
 
+.shop-button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    color: #785b4c;
+    background-color: antiquewhite;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    transition: 0.2s ease;  
+}
+
+.shop-button:hover {
+    background-color: #0a7871;
+    color: #F6EEE3;
+}
 
 
 button.normal {
@@ -537,10 +554,16 @@ button.black {
 }
 
 #fleurdelis-updates button {
-    background-color: #0a7871;
-    color: #ffffff;
     white-space: nowrap;
+    background-color: #0a7871;
+ color: #F6EEE3;
 }
+
+#fleurdelis-updates button:hover{
+ background-color: #785b4c;
+ color: #F6EEE3;
+}
+    
 
 #fleurdelis-updates .form{
     display: flex;
