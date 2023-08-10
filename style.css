@@ -695,8 +695,17 @@ footer a:hover {
     #shiro {
         height: 50vh;
         background-position: top 30% right 50%;
-        padding: 0 80px;
        
+    }
+
+    #shiro h1 {
+        font-size:40px;
+
+    }
+
+    #shiro h4 {
+        text-align: left;
+    text-align: justify;
     }
 
     #feature {
@@ -708,12 +717,22 @@ footer a:hover {
         height: 20vh;
 
     }
+    #product1 .pro .cart {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50px;
+        background-color: #ffffff;
+        color: #007771;
+        border: 1px solid #fff8f8;
+        position: absolute;
+        bottom: 20px;
    
+    }
 
     #product1 .pro-container{
         justify-content: center;
-        
-
+    
     }
 
     #product1 .pro {
