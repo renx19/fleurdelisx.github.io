@@ -45,9 +45,9 @@
 
     <section id="product1"  class="section-p1">
             <div class="pro-container">
-            <div class="pro" onclick="window.location.href='product-details.html';">
-                <img src="images/products/1.jpg" alt="">
-                <div class="description">
+            <div class="pro">
+                <img src="images/products/1.jpg" alt=""  onclick="window.location.href='product-details.html';" >
+                <div class="description"  onclick="window.location.href='product-details.html';">
                     <span>ZARA</span>
                      <h5>Zara Squareneck Lettuce Buttondown </h5>
                      <p>Black</p>
@@ -63,9 +63,9 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro" onclick="window.location.href='product-details.html';">
-                <img src="images/products/2.jpg" alt="">
-                <div class="description">
+            <div class="pro">
+                <img src="images/products/2.jpg" alt=""  onclick="window.location.href='product-details.html';">
+                <div class="description" onclick="window.location.href='product-details.html';">
                     <span>ZARA</span>
                      <h5>Zara Squareneck Lettuce Buttondown </h5>
                      <p>Lavender</p>
@@ -81,9 +81,9 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro" onclick="window.location.href='product-details.html';">
-                <img src="images/products/3.jpg" alt="">
-                <div class="description">
+            <div class="pro">
+                <img src="images/products/3.jpg" alt="" onclick="window.location.href='product-details.html';">
+                <div class="description" onclick="window.location.href='product-details.html';">
                      <span>ZARA</span>
                      <h5>Zara Squareneck Lettuce Buttondown </h5>
                      <p>Pink</p>
@@ -99,9 +99,9 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
 
-            <div class="pro" onclick="window.location.href='product-details.html';">
-                <img src="images/products/4.jpg" alt="">
-                <div class="description">
+            <div class="pro">
+                <img src="images/products/4.jpg" alt=""  onclick="window.location.href='product-details.html';">
+                <div class="description" onclick="window.location.href='product-details.html';">
                      <span>ZARA</span>
                      <h5>Zara Squareneck Lettuce Buttondown </h5>
                      <p>Red</p>
@@ -266,9 +266,8 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
         
-            <div class="pro-container">
             <div class="pro">
-                <img src="images/new arrival/n1.webp" alt="">
+                <img src="images/new arrival/n1.jpg" alt="">
                 <div class="description">
                     <span>SHEIN </span>
                      <h5>SHEIN MOD Floral Print Split Thigh Cami Dress </h5>
@@ -286,7 +285,7 @@
             </div>
 
             <div class="pro">
-                <img src="images/new arrival/n2.webp" alt="">
+                <img src="images/new arrival/n2.jpg" alt="">
                 <div class="description">
                     <span>SHEIN</span>
                      <h5>SHEIN MOD Solid Knot Front Cami Dress</h5>
@@ -304,7 +303,7 @@
             </div>
 
             <div class="pro">
-                <img src="images/new arrival/n3.webp" alt="">
+                <img src="images/new arrival/n3.jpg" alt="">
                 <div class="description">
                      <span>SHEIN</span>
                      <h5>SHEIN BAE Draped Neck Split Thigh Cami Dress </h5>
@@ -322,7 +321,7 @@
             </div>
 
             <div class="pro">
-                <img src="images/new arrival/n4.webp" alt="">
+                <img src="images/new arrival/n4.jpg" alt="">
                 <div class="description">
                     <span>SHEIN</span>
                     <h5>SHEIN Belle Jacquard Crisscross Backless Satin Cami Dress</h5>
@@ -420,7 +419,7 @@
                      <span>PRADA</span>
                      <h5>Wool Blazer</h5>
                      <p></p>
-                     <div class="star">
+                     <div class="star"> 
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
@@ -490,12 +489,11 @@
         </div>
     </section>
 
-    <section id="page-numbers" class="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#"><i class="fas fa-arrow-alt-circle-right"></i></a>
-      </section>
+    <section id="pagination">
+        <button id="prevPage">Previous</button>
+        <button id="nextPage">Next</button>
+    </section>
+    
       
       
 
@@ -587,12 +585,100 @@ function search() {
     });
 }
 
+ </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const cartItemsContainer = document.querySelector('tbody');
+    const totalQuantityElement = document.getElementById('total-quantity');
+    const totalPriceElement = document.getElementById('total-price');
 
+    let cartItems = [];
+    let totalQuantity = 0;
+    let totalPrice = 0;
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productRow = button.parentElement.parentElement;
+            const productImage = productRow.querySelector('img').src;
+            const productName = productRow.querySelector('td:nth-child(2)').textContent;
+            const productPrice = parseFloat(productRow.querySelector('td:nth-child(3)').textContent.replace('₱', ''));
+            const productQuantity = parseInt(productRow.querySelector('input[type="number"]').value);
+
+            const existingItem = cartItems.find(item => item.name === productName);
+
+            if (existingItem) {
+                existingItem.quantity += productQuantity;
+            } else {
+                cartItems.push({
+                    name: productName,
+                    image: productImage,
+                    price: productPrice,
+                    quantity: productQuantity
+                });
+            }
+
+            updateCart();
+            alert('Item added to cart!');
+        });
+    });
+
+    function updateCart() {
+        cartItemsContainer.innerHTML = '';
+        totalQuantity = 0;
+        totalPrice = 0;
+
+        cartItems.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            totalQuantity += item.quantity;
+            totalPrice += itemTotal;
+
+            cartItemsContainer.innerHTML += `
+                <tr>
+                    <td><img src="${item.image}" alt="${item.name}"></td>
+                    <td>${item.name}</td>
+                    <td>₱${item.price}</td>
+                    <td>${item.quantity}</td>
+                    <td>₱${itemTotal.toFixed(2)}</td>
+                    <td><button class="remove-item">Remove</button></td>
+                </tr>
+            `;
+        });
+
+        totalQuantityElement.textContent = totalQuantity;
+        totalPriceElement.textContent = `₱${totalPrice.toFixed(2)}`;
+
+        const removeButtons = document.querySelectorAll('.remove-item');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const itemRow = button.parentElement.parentElement;
+                const itemName = itemRow.querySelector('td:nth-child(2)').textContent;
+                const itemIndex = cartItems.findIndex(item => item.name === itemName);
+
+                if (itemIndex !== -1) {
+                    cartItems.splice(itemIndex, 1);
+                    updateCart();
+                }
+            });
+        });
+    }
+});
 
     </script>
-</body>
 
+
+
+
+<script>
+
+
+</script>
+
+
+ <body>
+
+ </body>
 
 
 </html>
