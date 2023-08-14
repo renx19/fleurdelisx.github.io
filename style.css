@@ -1111,6 +1111,16 @@ background-position: bottom;
    text-align: center;
 }
 
+#page-numbers {
+    text-decoration: none;
+    padding: 10px 10px;
+    font-weight: 600;
+    color: #785b4c;
+    border-radius: 4px;
+    background-color: antiquewhite;
+}
+
+
 #pagination button{
     text-decoration: none;
     padding: 10px 10px;
