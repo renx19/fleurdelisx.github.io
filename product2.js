@@ -30,7 +30,7 @@ let generateShop2 = () => {
     }).join("");
   
     // Set the generated HTML as the innerHTML of the element with class "pro-container"
-    document.querySelector(".cart-items").innerHTML = generatedHTML;
+    document.querySelector(".pro-container2").innerHTML = generatedHTML;
 
   }
   
