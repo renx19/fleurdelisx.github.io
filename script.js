@@ -15,49 +15,6 @@ if (close) {
   }
   
 
-  // Function to update the subtotal and total quantity and price
-function updateSubtotal(input) {
-  const price = 200; // Replace with the actual price of the product
-  const quantity = parseInt(input.value);
-  const subtotalElement = input.parentElement.nextElementSibling;
-
-  const subtotal = price * quantity;
-  subtotalElement.textContent = `₱${subtotal}`;
-
-  updateTotal();
-}
-
-// Function to update the total quantity and price
-function updateTotal() {
-  const quantityInputs = document.querySelectorAll("#cart input[type='number']");
-  let totalQuantity = 0;
-  let totalPrice = 0;
-
-  quantityInputs.forEach((input) => {
-      totalQuantity += parseInt(input.value);
-      totalPrice += parseInt(input.value) * 200; // Replace with the actual price of the product
-  });
-
-  const totalQuantityElement = document.getElementById("total-quantity");
-  const totalPriceElement = document.getElementById("total-price");
-
-  totalQuantityElement.textContent = totalQuantity;
-  totalPriceElement.textContent = `₱${totalPrice}`;
-}
-
-// Function to apply the coupon code (Implement this function as per your requirements)
-function applyCoupon() {
-  // Implement coupon code logic here
-  // Update the total price if needed
-  updateTotal();
-}
-
-// Function for checkout (Implement this function as per your requirements)
-function checkout() {
-  // Implement checkout logic here
-}
-
-
 function validateLogin() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -91,3 +48,4 @@ linkedinIcon.addEventListener("click", function() {
   alert("Redirecting to LinkedIn login...");
   // Perform redirection logic here
 });
+

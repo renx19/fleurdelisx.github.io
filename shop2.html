@@ -14,117 +14,46 @@
         <a href="#"><img src="images/logo.png" class="logo" alt=""></a>
         <div>
             <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">News</a></li>
+                <form id="searchForm" action="search_results.html" method="GET">
+                 <input type="text" id="find" placeholder="Search..." onkeyup="search()">
+                </form>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="news.html">News</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li id="bag"><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                <a href="#" id="close"><i class="fas fa-window-close"></i></a>
+                <a href="#" id="close"> <i class="fas fa-window-close"> </i></a>
             </ul>
         </div>
         <div id="mobile">
             <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-            <i id="bar" class="fas fa-outdent"></i>
+            <i id="bar" class="fas fa-outdent"></i>"
+           
         </div>
     </section>
-    
 
-
-    <section id="shiro">
+    <section id="page-header">
         <!-- Home Page SHIRO/HERO   -->
-        <h4>Lily symbolises peace, hope and purity. We aspire to show the essence of our merchandise and shop.</h4>
-        <h2>"Modern and Trendy Clothes"</h2>
-        <h1>Fleur De Lis Apparel</h1>
-        <p>Have fun browsing at our shop lilies</p>
-        <a href="shop.html" class="shop-button">Shop Now</a>
-    </section>
-    
-    <section id="feature"  class="section-p1">
-        <div class="fe-box">
-            <img src="images/fdz.png" alt="">
-            <h6>Free Shipping</h6>
-        </div>
+      
+        <h2> "Modern and Trendy Clothes"</h2>
+        <h1> Fleur De Lis Apparel</h1>
+        <p> Have fun browsing at our shop lilies</p>
+       
+    </section>  
 
-        <div class="fe-box">
-            <img src="images/fdz2.png" alt="">
-            <h6>Order Now</h6>
-        </div>
-
-        <div class="fe-box">
-            <img src="images/fdz3.png" alt="">
-            <h6>Save Money</h6>
-        </div>
-
-        <div class="fe-box">
-            <img src="images/fdz4.png" alt="">
-            <h6>Sale% Promotions</h6>
-        </div>
-
-        <div class="fe-box">
-            <img src="images/fdz5.png" alt="">
-            <h6>Happy Sell</h6>
-        </div>
-
-        <div class="fe-box">
-            <img src="images/fdz6.png" alt="">
-            <h6>Customer Service</h6>
-        </div>
-    </section>
-    
     <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p> Bangla Tops Collection New Modern Design</p>
-        <div class="pro-container" id="pro-container">          
-</section>
+        <div class="pro-container2" id="pro-container2">  
+        </section>
 
-<section id="banner" class="section-m1">
-    <h4>24/7 Customer Service</h4>
-    <h2>Up to <span>50% Off</span>- Modern and Trendy Clothes</h2>
-    <button class="normal">Explore More</button>
-   </section>
-  
-   <section id="product1" class="section-p1">
-    <div class="pro-container2" id="pro-container2">  
-    </section>
-     
-    <section id="sm-banner" class="section-p1">
-        <div class="banner-box">
-            <h4>Fleur De Lis SALE %</h4>
-            <h2>Buy 1 get a Free Item</h2>
-            <span>Modern and Trendy Clothes is on Sale</span>
-            <button class="black"> Learn More</button>
-        </div>
-
-        <div class="banner-box banner-box1">
-            <h4>Fleur De Lis SALE %</h4>
-            <h2>Winter Season</h2>
-            <span>Modern and Trendy Clothes </span>
-            <button class="black"> Collection</button>
-        </div>
-    </section>
-
-    
-    <section id="banner3">
-        <div class="banner-box">
-            <h2>Fleur De Lis SALE %</h2>
-            <h3>SUmmer Collection -50 % OFF</h3>
-          
             
-        </div>
 
-        <div class="banner-box banner-box2">
-            <h2>Fleur De Lis SALE %</h2>
-            <h3>Winter Season</h3>
-        
-        </div>
-
-        <div class="banner-box banner-box3">
-            <h2>Fleur De Lis SALE %</h2>
-            <h3>Winter Season</h3>
-        
-        </div>
+    <section id="pagination">
+        <button id="prevPage" onclick="window.location.href='shop.html';">Prev</button>
     </section>
+    
+      
+      
 
     <section id="fleurdelis-updates" class="section-p2 section-m1">
         <div class="updates">
@@ -188,14 +117,44 @@
 
     </div>
     </footer>
+    <script src="cart.js"></script>
     <script src="data.js"></script>
     <script src="data2.js"></script>
-    <script src="cart.js"></script>
-<script src="product2.js"></script>
+    <script src="product2.js"></script>
 <script src="script.js"></script>
 <script src="product.js"></script>
-</body>
+<script>
+function search() {
+    let filter = document.getElementById('find').value.trim().toLocaleUpperCase();
+    let products = document.querySelectorAll('.pro');
 
+    products.forEach(product => {
+        let productName = product.querySelector('h5').textContent.toLocaleUpperCase();
+        let productPrice = product.querySelector('.description h4').textContent;
+        let productColor = product.querySelector('.description p').textContent.toLocaleUpperCase();
+        let productBrand = product.querySelector('.description span').textContent.toLocaleUpperCase();
+
+        if (
+            productName.includes(filter) ||
+            productPrice.includes(filter) ||
+            productColor.includes(filter) ||
+            productBrand.includes(filter)
+        ) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+</script>
+
+
+
+
+ <body>
+
+ </body>
 
 
 </html>

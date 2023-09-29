@@ -7,6 +7,7 @@
     <title>Fleur De Lis</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
 
@@ -36,90 +37,74 @@
         <h1> Fleur De Lis Apparel</h1>
         <p> Shop More, See Our 50% Off </p>   
     </section>
-    
-    <section id="cart" class="section-p1">
-        <table width="100%">
-            <thead>
-                <tr>
-                    <td>Image</td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Subtotal</td>
-                    <td>Remove</td>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Existing items in the cart -->
-                <tr>
-                    <td><img src="images/products/1.jpg" alt=""></td>
-                    <td>Zara Squareneck Lettuce Buttondown</td>
-                    <td>₱200</td>
-                    <td><input type="number" value="1" min="1"></td>
-                    <td>₱200</td>
-                    <td><i class="fas fa-trash-alt"></i></td>
-                </tr>
-    
-                <tr>
-                    <td><img src="images/products/5.jpg" alt=""></td>
-                    <td>Shein Cardigan</td>
-                    <td>₱200</td>
-                    <td><input type="number" value="1" min="1"></td>
-                    <td>₱200</td>
-                    <td><i class="fas fa-trash-alt"></i></td>
-                </tr>
-    
-                <tr>
-                    <td><img src="images/products/8.jpg" alt=""></td>
-                    <td>Shein One shoulder top</td>
-                    <td>₱200</td>
-                    <td><input type="number" value="1" min="1"></td>
-                    <td>₱200</td>
-                    <td><i class="fas fa-trash-alt"></i></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
- 
 
- 
-    <!-- Coupon and Checkout Sections -->
-    <section id="coupon-checkout-container" class="section-p1">
-        <div id="coupon">
-            <h2>Apply Coupon</h2>
-            <input type="text" id="coupon-code" placeholder="Enter Coupon-Code">
-            <button onclick="applyCoupon()">Apply </button>
-            <p id="coupon-result"></p>
-        </div>
-    
-        <div id="checkout-box">
-            <h2>Checkout</h2>
-            <table>
-                <tr>
-                    <td>Total Quantity:</td>
-                    <td id="total-quantity">3</td>
-                </tr>
-                <tr>
-                    <td>Total Price:</td>
-                    <td id="total-price">₱600</td>
-                </tr>
-                <tr>
-                    <td>Payment Method:</td>
+
+    <section id="cart">
+        <div id="cart-table" class="cart-table">
+            <div class="cart-container">
+                <div class="cart-row">
+                    <div class="addToCart">
+                        <div class="cart-top">
+                            <h2>Shopping Cart</h2>
+                            <h2 id="itemA"></h2>
+                        </div>
+                        <table cellspacing="0" class="table-head">
+                            <tr>
+                                <th width="150" class="cart-image">Image</th>
+                                <th width="360" class="cart-name">Product</th>
+                                <th width="150" class="cart-price">Price</th>
+                                <th width="150" class="cart-qunatity">Quantity</th>
+                                <th width="150" class="cart-remove">Remove</th>
+                            </tr>
+                            
+                        </table>
+                      
+                        <table id="cart-items" class="cart-items" cellspacing="0">
+
+                        </table>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+
+                         
+             <div class="summary">
+                <table cellspacing="0" class="table-head">
+                    <tr class="cart-1">
+                        <td class="">Total Quantity:</td>
+                        <td id="total-quantity"></td>
+                    </tr>
+                    <tr class="cart-2">
+                        <td class="">Total Price:</td>
+                        <td id="total-price"></td>
+                    </tr>
+                    <tr>
+                       
+                    </tr>
+                </table>
+                <div class="payment">
+                    <input type="text" placeholder="Enter your code" id="promocode" class="coupon-input">
                     <td id="payment-select">
                         <!-- Select Type of Payment -->
-                      
                         <select id="payment-type">
                             <option value="credit-card">Credit Card</option>
                             <option value="paypal">PayPal</option>
                             <option value="bank-transfer">Bank Transfer</option>
                             <!-- Add other payment options as needed -->
                         </select>
-                        <button onclick="checkout()">Checkout</button>
                     </td>
-                </tr>
-            </table>
-        </div>
+                    <button class="checkout-button" onclick="checkout()">Checkout</button>
+                </div>
+            
+       
+    </div>
     </section>
+    
+
+ 
+  
+    
     
     
     <section id="fleurdelis-updates" class="section-p2 section-m1">
@@ -183,13 +168,8 @@
     
 
     </div>
-    </footer>
-
-    
-    
-    
-
-
+</footer>
+<script src="main.js" ></script>
     <script src="script.js"></script>
 </body>
 

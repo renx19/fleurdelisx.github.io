@@ -266,11 +266,15 @@ body {
 
 
 
-#product1 .pro-container {
+#product1 .pro-container, #product1 .pro-container2 {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-left: 50px;
+   
 }
+
+
 
 
 
@@ -425,12 +429,12 @@ body {
 }
 
 #sm-banner h4{
-    color:#ffffff;
+    color:#020202;
     font-size: 20px;
 }
 
 #sm-banner h2 {
-    color:#ffffff;
+    color:#0c0c0c;
     font-size: 30px;
 
 }
@@ -645,7 +649,7 @@ footer a:hover {
 }
 
 
-@media (max-width:799px) {
+@media (max-width:820px) {
 
     .section-p1 {
         padding: 40px 40px;
@@ -739,14 +743,15 @@ footer a:hover {
    
     }
 
-    #product1 .pro-container{
+    #product1 .pro-container , #product1 .pro-container2{
         justify-content: center;
         gap: 0 !important;
-    
+        margin-right:50px;
     }
 
     #product1 .pro {
         margin: 15px;
+        min-width: 165px;
     }
 
     #banner {
@@ -865,9 +870,30 @@ section.cart-page p {
 }
 #searchForm input[type="text"] {
 margin-bottom: 20px;
+}
 
+
+#payment-select {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.cart-container, .summary {
+    margin: 20px !important;
+}
+.checkout-button{
+   margin-left: 90px !important;
 
 }
+.summary {
+    margin: 3rem 150px;
+    width: 90% !important;
+    
+}
+#payment-type {
+    margin-left: 80px !important;
+}
+
 }
 
 
@@ -935,6 +961,7 @@ margin-bottom: 20px;
 
     #product1 .pro{
         width: 100%;
+            min-width: 165px;
     }
     
     #banner {
@@ -1075,7 +1102,23 @@ margin-bottom: 20px;
     flex-direction: row;
     align-items: flex-start;
 }
+.cart-container, .summary {
+    margin: 20px !important;
 }
+.checkout-button{
+   margin-left: 210px !important;
+
+}
+.summary {
+    margin: 3rem 150px;
+    width: 90% !important;
+    
+}
+#payment-type {
+    margin-left: 30px !important;
+}
+}
+
 
 
 #page-header{
@@ -1480,181 +1523,153 @@ background-position: bottom;
 }
 
 
-/* Cart Page*/
-/* Styles for the cart table */
-
-
-#cart {
-    overflow-x: auto;
-}
-#cart table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
-}
-
-#cart table img {
-    width: 70px;
-}
-
-#cart table td:nth-child(1) {
-    width: 100px;
-    text-align: center;
-}
-
-#cart table td:nth-child(2) {
-    width: 200px; /* Adjusted width for the product column */
-    text-align: center;
-}
-
-#cart table td:nth-child(3), 
-#cart table td:nth-child(4),
-#cart table td:nth-child(5) {
-    width: 150px;
-    text-align: center;
-}
-
-#cart table td:nth-child(6) {
-    width: 150px;
-    text-align: center;
-}
-
-#cart table td:nth-child(4) input {
-    width: 40px;
-    padding: 5px 3px 5px 10px;
-}
-
-#cart table thead {
-    border: 1px solid #e2e2e2;
-    border-left: none;
-    border-right: none;
-}
-
-#cart table thead td {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 18px 0;
-}
-
-#cart table tbody tr td {
-    padding-top: 15px;
-    vertical-align: middle;
-}
-
-#cart table tbody td {
-    font-size: 13px;
-}
-
-
-/* Styles for the cart table (same as your previous code) */
+/*cart page /*
 
 /* Additional styles for the added sections */
 
-#coupon-checkout-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
 
-#coupon {
-    flex: 1;
-    margin-right: 20px;
-    margin-left: 50px;
+.addtoCart {
+    width: 65%;
+    background-color: antiquewhite;
+}
+.cart-top {
+    display: flex;
+    justify-content: space-between;
+   padding: 20px;
+}
+.summary-top {
+    display: flex;
+    justify-content: space-between;
+   padding: 20px;
 }
 
-#checkout-box {
-    flex: 1;
-    margin-right: 130px;
+table {
+    width:100%;
+    padding: 20px;
+   
+}
+
+.table-head {
+    color:rgb(2, 2, 2);
+    background-color: antiquewhite;
+}
+.cart-image {
+    text-align: left;
+    padding-left: 7px;
+}
+#payment-type {
+    background-color: antiquewhite;
+    color: #785b4c;
+    font-weight: 700;
+    padding: 7px;
+    margin-left: 10px;
     
 }
 
-#coupon label {
-    display: inline-block;
-    width: 100px;
-    text-align: right;
-    margin-right: 10px;
+.cart-detail {
+    margin: 10px 0;
+    padding: 0 10px;
+    align-items: center;
+    background-color: #eeeeee;
+    color: #a1a09f;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
 }
 
-#coupon input[type="text"] {
-    width: 200px;
-    padding: 5px;
-    margin-bottom: 10px;
 
+
+.coupon-input{
+    width: 120px;
+    height: 30px;
+  
+    padding: 7px;
+    max-width: 200px;
+    margin:10px
 }
 
-#coupon button {
+#coupon-button {
     padding: 8px 15px;
     background-color: antiquewhite;
     color: #785b4c;
     border: none;
     cursor: pointer;
     font-weight: 700;
+    
+   
 }
-
-#coupon button:hover {
+#coupon-button:hover {
     background-color: #0a7871;
     color: #fff; /* Text color change on hover */
 }
 
-#checkout-box h2 {
-    margin-bottom: 10px;
-}
-
-#checkout-box table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-#checkout-box table td {
-    padding: 8px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #e2e2e2;
-}
-
-#checkout-box table td:last-child {
-    text-align: right;
-    justify-content: space-between;
-    
-}
-
-#checkout-box button {
+.checkout-button{
     padding: 8px 15px;
     background-color: antiquewhite;
     color: #785b4c;
     border: none;
     cursor: pointer;
     font-weight: 700;
+    margin: 10px 10px;
+    margin:10px
+   
 }
-
-
-
-/* Specificity added to the button:hover rule */
-#checkout-box button:hover {
+.checkout-button:hover {
     background-color: #0a7871;
-    color: #f6eee3; /* Text color change on hover */
+    color: #fff; /* Text color change on hover */
 }
 
-/* Additional styles for the payment select */
-#payment-select {
-    display: flex;
-    align-items: center;
+
+.cart-container {
+   
+    margin: 3rem 150px;
+    background-color: #bebebe;
+    min-height: 300px;
+    height: auto;
+    
 }
 
-#payment-select label {
-    margin-right: 10px;
+
+
+.addToCart {
+
 }
 
-/* Align checkout button to the right */
-#checkout-box button {
-    margin-left: 20px;
-    float: right;
-    font-weight: 700;
+.summary {
+    margin: 3rem 150px;
+        background-color: #bebebe;
+    justify-content: space-between;
+    width: 30%;
+    
 }
-#payment-select select {
-    background-color: antiquewhite;
+.summary h2 {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+
+
+}
+#total-quantity, #total-price {
+    align-items: end !important;
+    justify-content: end !important;
+    color: #007771;
+    font-weight: bold;
+}
+
+.cart-1, .cart-2 {
     color: #785b4c;
-    font-weight: 700;
+    font-weight: bold;
+}
+
+.payment {
+    padding: 10px;
+   
+
+}
+#payment-type{
+    margin-left: 30px
+}
+
+.checkout-button {
+    margin-left: 50px;
 }

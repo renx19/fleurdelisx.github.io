@@ -50,7 +50,7 @@
               <option>Extra Large</option>
             </select>
             <input type="number" value="1" min="1">
-            <button class="normal">Add to Cart</button>
+            <button class="normal"></button>
             <h4>Product Details</h4>
             <span>The Zara Squareneck Lettuce Buttondown is a stylish and versatile top that effortlessly combines contemporary design with timeless elegance. This chic button-down blouse is perfect for fashion-conscious individuals seeking a wardrobe staple that can seamlessly transition from day to night.</span>
           </div>
@@ -72,229 +72,231 @@
       <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
         <p> Bangla Tops Collection New Modern Design</p>
-        <div class="pro-container">
-            <div class="pro" onclick="window.location.href='product-details.html';">
-                <img src="images/products/1.jpg" alt=""> 
-                <div class="description" data-brand="ZARA" data-name="Zara Squareneck Lettuce Buttondown" data-color="Black" data-price="200">
-                    <span>ZARA</span>
-                    <h5>Zara Squareneck Lettuce Buttondown</h5>
-                    <p>Black</p>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-           
-            <div class="pro" onclick="window.location.href='product-details.html';">
-                <img src="images/products/2.jpg" alt="">
-                <div class="description" data-brand="ZARA" data-name="Zara Squareneck Lettuce Buttondown" data-color="Lavender" data-price="200">
-                    <span class="brand">ZARA</span>
-                    <h5 class="name">Zara Squareneck Lettuce Buttondown</h5>
-                    <p class="color">Black</p>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4 class="price">₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            
-
-            <div class="pro" onclick="window.location.href='product-details.html';">
-                <img src="images/products/3.jpg" alt="">
-                <div class="description" data-brand="ZARA" data-name="Zara Squareneck Lettuce Buttondown" data-color="Pink" data-price="200">
-                     <span>ZARA</span>
-                     <h5>Zara Squareneck Lettuce Buttondown </h5>
-                     <p>Pink</p>
-                     <div class="star">
+        <section id="product1" class="section-p1">
+    
+          <div class="pro-container">
+              <div class="pro">
+                  
+                  <img src="images/products/1.jpg" alt="" onclick="window.location.href='product-details.html';">
+                  <div class="description" data-brand="ZARA" data-name="Zara Squareneck Lettuce Buttondown" data-color="Black" data-price="200" onclick="window.location.href='product-details.html';">
+                      <span>ZARA</span>
+                      <h5>Zara Squareneck Lettuce Buttondown</h5>
+                      <p>Black</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-            <div class="pro" onclick="window.location.href='product-details.html';">
-                <img src="images/products/4.jpg" alt="">
-                <div class="description" data-brand="ZARA" data-name="Zara Squareneck Lettuce Buttondown" data-color="Red" data-price="200">
-                     <span>ZARA</span>
-                     <h5>Zara Squareneck Lettuce Buttondown </h5>
-                     <p>Red</p>
-                     <div class="star">
+                      </div>                  
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Zara Squareneck Lettuce Buttondown', price: 200, image: 'images/products/1.jpg' })"></i>
+              </div>
+             
+              <div class="pro">
+                  <img src="images/products/2.jpg" alt="" onclick="window.location.href='product-details.html';">
+                  <div class="description" data-brand="ZARA" data-name="Zara Squareneck Lettuce Buttondown" data-color="Black" data-price="200" onclick="window.location.href='product-details.html';">
+                      <span class="brand">ZARA</span>
+                      <h5 class="name">Zara Squareneck Lettuce Buttondown</h5>
+                      <p class="color">Black</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-
-            <div class="pro">
-                <img src="images/products/5.jpg" alt="">
-                <div class="description" data-brand="SHEIN" data-name="Shein Cardigan" data-color="Old Rose" data-price="200">
-                    <span>SHEIN</span>
-                     <h5>Shein Cardigan </h5>
-                     <p>Old Rose </p>
-                     <div class="star">
+                      </div>                  
+                      <h4 class="price">₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Zara Squareneck Lettuce Buttondown', price: 200, image: 'images/products/2.jpg' })"></i>
+              </div>
+              
+              
+  
+              <div class="pro">
+                  <img src="images/products/3.jpg" alt="" onclick="window.location.href='product-details.html';">
+                  <div class="description" data-brand="ZARA" data-name="Zara Squareneck Lettuce Buttondown" data-color="Pink" data-price="200" onclick="window.location.href='product-details.html';">
+                      <span>ZARA</span>
+                      <h5>Zara Squareneck Lettuce Buttondown</h5>
+                      <p>Pink</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="images/products/6.jpg" alt="">
-                <div class="description" data-brand="SHEIN" data-name="Shein Cardigan" data-color="Teal" data-price="200">
-                    <span>SHEIN</span>
-                    <h5>Shein Cardigan </h5>
-                    <p>Teal </p>
-                     <div class="star">
+                      </div>                  
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Zara Squareneck Lettuce Buttondown', price: 200, image: 'images/products/3.jpg' })"></i>
+              </div>
+              
+              <div class="pro">
+                  <img src="images/products/4.jpg" alt="" onclick="window.location.href='product-details.html';">
+                  <div class="description" data-brand="ZARA" data-name="Zara Squareneck Lettuce Buttondown" data-color="Red" data-price="200" onclick="window.location.href='product-details.html';">
+                      <span>ZARA</span>
+                      <h5>Zara Squareneck Lettuce Buttondown</h5>
+                      <p>Red</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-
-            <div class="pro">
-                <img src="images/products/7.jpg" alt="">
-                <div class="description" data-brand="SHEIN" data-name="Shein One shoulder top" data-color="Lavender" data-price="200">
-                    <span>SHEIN</span>
-                     <h5>Shein One shoulder top</h5>
-                     <p>Lavender</p>
-                     <div class="star">
+                      </div>                  
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Zara Squareneck Lettuce Buttondown', price: 200, image: 'images/products/4.jpg' })"></i>
+              </div>
+  
+  
+              <div class="pro">
+                  <img src="images/products/5.jpg" alt="">
+                  <div class="description" data-brand="SHEIN" data-name="Shein Cardigan" data-color="Old Rose" data-price="200">
+                      <span>SHEIN</span>
+                      <h5>Shein Cardigan</h5>
+                      <p>Old Rose</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-
-            <div class="pro">
-                <img src="images/products/8.jpg" alt="">
-                <div class="description" data-brand="SHEIN" data-name="Shein One shoulder top" data-color="Turquoise" data-price="200">
-                    <span>SHEIN</span>
-                    <h5>Shein One shoulder top</h5>
-                    <p>Turquoise</p>
-                     <div class="star">
+                      </div>
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Shein Cardigan', price: 200, image: 'images/products/5.jpg' })"></i>
+              </div>
+              
+              <div class="pro">
+                  <img src="images/products/6.jpg" alt="">
+                  <div class="description" data-brand="SHEIN" data-name="Shein Cardigan" data-color="Teal" data-price="200">
+                      <span>SHEIN</span>
+                      <h5>Shein Cardigan</h5>
+                      <p>Teal</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="images/products/9.jpg" alt="">
-                <div class="description" data-brand="GUESS" data-name="Ladies Guess Embroided" data-color="Black" data-price="200">
-                     <span>GUESS</span>
-                     <h5>Ladies Guess Embroided Top  </h5>
-                     <p>Black</p>
-                     <div class="star">
+                      </div>
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Shein Cardigan', price: 200, image: 'images/products/6.jpg' })"></i>
+              </div>
+  
+  
+              <div class="pro">
+                  <img src="images/products/7.jpg" alt="">
+                  <div class="description" data-brand="SHEIN" data-name="Shein One shoulder top" data-color="Lavender" data-price="200">
+                      <span>SHEIN</span>
+                      <h5>Shein One shoulder top</h5>
+                      <p>Lavender</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-            <div class="pro">
-                <img src="images/products/10.jpg" alt="">
-                <div class="description" data-brand="Karl Kani" data-name="Karl Kani Shirt" data-color="Gray" data-price="200">
-                     <span>Karl Kani</span>
-                     <h5>Karl Kani Shirt </h5>
-                     <p>Gray</p>
-                     <div class="star">
+                      </div>
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Shein One shoulder top', price: 200, image: 'images/products/7.jpg' })"></i>
+              </div>
+              
+              <div class="pro">
+                  <img src="images/products/8.jpg" alt="">
+                  <div class="description" data-brand="SHEIN" data-name="Shein One shoulder top" data-color="Turquoise" data-price="200">
+                      <span>SHEIN</span>
+                      <h5>Shein One shoulder top</h5>
+                      <p>Turquoise</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-
-            <div class="pro">
-                <img src="images/products/11.jpg" alt="">
-                <div class="description" data-brand="SHEIN" data-name="Shein Collared Ribknit Top" data-color="White" data-price="200">
-                     <span>SHEIN</span>
-                     <h5>Shein Collared Ribknit Top</h5>
-                     <p>White</p>
-                     <div class="star">
+                      </div>
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Shein One shoulder top', price: 200, image: 'images/products/8.jpg' })"></i>
+              </div>
+              
+              <div class="pro">
+                  <img src="images/products/9.jpg" alt="">
+                  <div class="description" data-brand="GUESS" data-name="Ladies Guess Embroided" data-color="Black" data-price="200">
+                      <span>GUESS</span>
+                      <h5>Ladies Guess Embroided Top</h5>
+                      <p>Black</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-
-
-            <div class="pro">
-                <img src="images/products/12.jpg" alt="">
-                <div class="description" data-brand="Bershka" data-name="Bershka Squareneck Side Ruched Top" data-color="Black" data-price="200">
-                     <span>Bershka</span>
-                     <h5>Bershka Squareneck Side Ruched Top</h5>
-                     <p>Black</p>
-                     <div class="star">
+                      </div>
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Ladies Guess Embroided Top', price: 200, image: 'images/products/9.jpg' })"></i>
+              </div>
+              
+              <div class="pro">
+                  <img src="images/products/10.jpg" alt="">
+                  <div class="description" data-brand="Karl Kani" data-name="Karl Kani Shirt" data-color="Gray" data-price="200">
+                      <span>Karl Kani</span>
+                      <h5>Karl Kani Shirt</h5>
+                      <p>Gray</p>
+                      <div class="star">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
-                    </div>                  
-                    <h4>₱200;</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-        </div>
+                      </div>
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Karl Kani Shirt', price: 200, image: 'images/products/10.jpg' })"></i>
+              </div>
+              
+              <div class="pro">
+                  <img src="images/products/11.jpg" alt="">
+                  <div class="description" data-brand="SHEIN" data-name="Shein Collared Ribknit Top" data-color="White" data-price="200">
+                      <span>SHEIN</span>
+                      <h5>Shein Collared Ribknit Top</h5>
+                      <p>White</p>
+                      <div class="star">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <h4>₱200</h4>
+                  </div>
+                  <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Shein Collared Ribknit Top', price: 200, image: 'images/products/11.jpg' })"></i>
+              </div>
+              
+      
+                 
+                  <div class="pro">
+                      <img src="images/products/12.jpg" alt="">
+                      <div class="description" data-brand="Bershka" data-name="Bershka Squareneck Side Ruched Top" data-color="Black" data-price="200">
+                          <span>Bershka</span>
+                          <h5>Bershka Squareneck Side Ruched Top</h5>
+                          <p>Black</p>
+                          <div class="star">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                          </div>
+                          <h4>₱200;</h4>
+                      </div>
+                      <i class="fas fa-shopping-cart cart" onclick="addToCart({ name: 'Bershka Squareneck Side Ruched Top', price: 200, image: 'images/products/12.jpg' })"></i>
+                    </div>  
     </section>
 
     <section id="fleurdelis-updates" class="section-p2 section-m1">
